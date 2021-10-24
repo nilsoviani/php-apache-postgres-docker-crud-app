@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+# Allows rewriting url requests
+RewriteEngine On
+
+# If file and the folder do not exist, do the following rewrite
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect all requests to index
+RewriteRule ^ index.php [QSA,L]
+</IfModule>
