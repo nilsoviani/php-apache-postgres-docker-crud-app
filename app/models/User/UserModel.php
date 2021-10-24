@@ -75,7 +75,7 @@ class UserModel extends Model
     $query->bindParam(':surname', $surname, PDO::PARAM_STR, 50);
     $query->bindParam(':country_code', $countryCode, PDO::PARAM_STR, 10);
     $query->bindParam(':dni', $dni, PDO::PARAM_STR, 15);
-    $query->bindParam(':email', $email, PDO::PARAM_STR, 50);
+    $query->bindParam(':email', $email, PDO::PARAM_STR, 150);
     $query->bindParam(':password', $password, PDO::PARAM_STR, 60);
 
     $query->execute();
@@ -88,7 +88,7 @@ class UserModel extends Model
   public function create($requestParams): void
   {
     $connection = $this->getConnection();
-    $sql = "INSERT INTO users(name, surname, country_code, dni, email, password) VALUES (:name, :surname, :country_code, :dni, :email, :password)";
+    $sql = "INSERT INTO users(id, name, surname, country_code, dni, email, password) VALUES (DEFAULT, :name, :surname, :country_code, :dni, :email, :password)";
 
     $name = $requestParams['name'] ? $requestParams['name'] : '';
     $surname = $requestParams['surname'] ? $requestParams['surname'] : '';
@@ -102,7 +102,7 @@ class UserModel extends Model
     $query->bindParam(':surname', $surname, PDO::PARAM_STR, 50);
     $query->bindParam(':country_code', $countryCode, PDO::PARAM_STR, 10);
     $query->bindParam(':dni', $dni, PDO::PARAM_STR, 15);
-    $query->bindParam(':email', $email, PDO::PARAM_STR, 50);
+    $query->bindParam(':email', $email, PDO::PARAM_STR, 150);
     $query->bindParam(':password', $password, PDO::PARAM_STR, 60);
 
     $query->execute();
