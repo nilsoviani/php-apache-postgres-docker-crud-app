@@ -1,0 +1,112 @@
+.table-container {
+  display: block;
+  max-width: 100%;
+}
+
+/* Table row */
+.flex-table {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #222222;
+}
+
+/* Row spacing */
+.flex-table.row {
+  margin-bottom: .5rem;
+}
+
+/* Table cell */
+.flex-row {
+  width: calc(100% / 6);
+  text-align: center;
+  padding: 0.5em 0.5em;
+  align-content: center;
+  display: grid;
+  word-break: break-all;
+}
+
+/* Table header */
+.flex-table.header {
+  color: white;
+  font-weight: bold;
+}
+
+/* Border bottom to each cell in table header */
+.flex-table.header > .flex-row{
+  border-bottom: 3px solid black;
+}
+
+/* Even rows */
+.flex-table.row:nth-child(2n) .flex-row {
+  background-color: white;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Odd rows */
+.flex-table.row:nth-child(2n+1) .flex-row {
+  background-color: #dadada;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Columns width */
+div.flex-table > div.flex-row {
+  width: calc(100%  / 6 - 1rem);
+  text-align: center;
+}
+
+/* Last column */
+div.flex-table > div.flex-row:last-of-type {
+  justify-content: center;
+  display: inline-flex;
+}
+
+/* Action buttons spacing */
+.flex-table > .flex-row:last-of-type > a.button {
+  margin: 0.4rem;
+}
+
+/* New record container */
+#flex-table-row-adder-container > .flex-row {
+  cursor: pointer;
+  width: 100%;
+  background-color: #686868;
+  justify-content: right;
+}
+
+/* Rows container */
+#flex-table-rows-container {
+  overflow-y: auto;
+  max-height: 540px;
+}
+
+
+@media screen and (max-device-width: 539px){
+  div.flex-table > div.flex-row {
+    width: calc(100%);
+    text-align: center;
+  }
+  #flex-table-row-adder-container > .flex-row {
+    justify-content: center;
+  }
+}
+@media screen and (min-device-width: 540px){
+  div.flex-table > div.flex-row {
+    width: calc(100%  / 2 - 1rem);
+    text-align: center;
+  }
+}
+@media screen and (min-device-width: 1024px){
+  div.flex-table > div.flex-row {
+    width: calc(100%  / 6 - 1rem);
+    text-align: center;
+  }
+}

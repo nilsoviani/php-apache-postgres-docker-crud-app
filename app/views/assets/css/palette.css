@@ -1,0 +1,85 @@
+/* Palette */
+.primary {
+  background-color: #1976d2;
+}
+.secondary {
+  background-color: #9c27b0;
+}
+.success {
+  background-color: #4caf50;
+}
+.info {
+  background-color: #03a9f4;
+}
+.warning {
+  background-color: #ff9800;
+}
+.danger {
+  background-color: #ef5350;
+}
+.dark {
+  background-color: #3a3a3a;
+}
+.darker {
+  background-color: #222;
+}
+
+
+/* Color and background tag styles */
+nav {
+  color: #fff;
+}
+body {
+  color: #fff;
+  background: #d5d5d5;
+}
+input, select, textarea{
+  color: #3A3F44;  
+}
+input:focus, input:hover, select:focus, select:hover, textarea:focus, textarea:hover {
+  background-color: #eeeeee;
+}
+
+
+/* Color and background classe styles */
+/* inputs */
+.input-fa-label {
+  color: #bbbbbb;
+  background-color: #222222;
+}
+.input-left-label {
+  background-color: #ffffff;
+}
+/* container */
+.container-content {
+	color: #ffff;
+}
+.container {
+	background:rgba(58,63,68,0.5);
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+}
+/* buttons */
+.button {
+  color: #eee;
+}
+.button.primary:focus, .button.primary:hover {
+  background-color: #1565c0;
+}
+.button.secondary:focus, .button.secondary:hover {
+  background-color: #7b1fa2;
+}
+.button.success:focus, .button.success:hover {
+  background-color: #2e7d32;
+}
+.button.info:focus, .button.info:hover {
+  background-color: #0288d1;
+}
+.button.warning:focus, .button.warning:hover {
+  background-color: #ed6c02;
+}
+.button.danger:focus, .button.danger:hover {
+  background-color: #d32f2f;
+}
+.button.dark:focus, .button.dark:hover {
+  background-color: #242424;
+}
